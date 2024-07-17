@@ -40,6 +40,7 @@ const InchToMm = () => {
         Result: <span id='result'>{valueInMm.toFixed(3)}</span> mm
       </p>
 
+     {/* TODO: Implement copy to clipboard function */}
       <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full mb-4'>
         Copy to clipboard
       </button>

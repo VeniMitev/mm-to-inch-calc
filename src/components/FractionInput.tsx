@@ -16,7 +16,7 @@ export type Props = {
 };
 
 const FractionInput = (props: Props) => {
-  const { value, className, step, min } = props;
+  const { value, className, step, min, id, name } = props;
 
   const [displayValue, setDisplayValue] = useState<string>(
     numberWithFractionFormatter(value || 1),
@@ -33,9 +33,9 @@ const FractionInput = (props: Props) => {
       )}
     >
       <input
-        className='border border-gray-300 rounded py-2 px-3 text-gray-800'
-        id='mm-to-inch'
-        name='mm-to-inch'
+        className='border border-gray-300 rounded-l py-2 px-3 text-gray-800'
+        id={id}
+        name={name}
         value={displayValue}
         onChange={handleChange}
         onBlur={handleBlur}
