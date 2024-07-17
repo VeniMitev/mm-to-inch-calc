@@ -2,7 +2,7 @@ import React from 'react';
 import findNearestMarkValue from '../utils/findNearestMarkValue';
 import numberWithFractionFormatter from '../utils/numberWithFractionFormatter';
 import parseNumberWithFraction from '../utils/parseNumberWithFraction';
-// import { Props } from '../NumberInputFractions';
+import { Props } from '../components/FractionInput';
 
 const useNumberInputFractions = (
     props: Props,
