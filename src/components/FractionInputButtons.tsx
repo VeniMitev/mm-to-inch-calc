@@ -1,42 +1,20 @@
 import { ChevronDown, ChevronUp } from 'tabler-icons-react';
+import { twMerge } from 'tailwind-merge';
 
 type Props = {
   incrementValue: () => void;
   decrementValue: () => void;
 };
 const FractionInputButtons = ({ incrementValue, decrementValue }: Props) => {
-//   const buttonStyle = {
-//     cursor: 'pointer',
-//     border: 'none',
-//     background: 'transparent',
-//     padding: '0 0.25em',
-//     height: '100%',
-//     display: 'flex',
-//     alignItems: 'center',
-//     fontSize: '1em',
-//     width: '100%',
-//   };
-
-   const buttonClass = 'border border-gray-300 rounded py-1 px-1 text-gray-800 cursor-pointer';
+  const buttonClass =
+    'border border-gray-300 p-0.5 text-gray-800 cursor-pointer';
 
   return (
-    <div
-      //   style={{
-      //     cursor: 'pointer',
-      //     display: 'flex',
-      //     flexDirection: 'column',
-      //     justifyContent: 'center',
-      //     alignItems: 'end',
-      //     width: '100%',
-      //     borderLeft: '1px solid lightgray',
-      //   }}
-      className='flex flex-col justify-center items-center w-1/4 h-full border-l border-gray-300 cursor-pointer'
-    >
+    <div className='flex flex-col justify-center items-start w-1/4 h-full cursor-pointer'>
       <div
         // type='button'
         tabIndex={-1}
-        // style={buttonStyle}
-        className={buttonClass}
+        className={twMerge(buttonClass + 'border-b-0 border-l-0 rounded-tr')}
         onClick={(e) => {
           e.preventDefault();
           incrementValue();
@@ -54,20 +32,11 @@ const FractionInputButtons = ({ incrementValue, decrementValue }: Props) => {
       >
         <ChevronUp size={16} strokeWidth={1} color='black' />
       </div>
-      <hr
-        // style={{
-        //   width: '100%',
-        //   margin: '0',
-        //   border: 'none',
-        //   borderTop: '1px solid lightgray',
-        // }}
-        className='w-full border-t border-gray-300'
-      />
+
       <div
         // type='button'
         tabIndex={-1}
-        // style={buttonStyle}
-        className={buttonClass}
+        className={twMerge(buttonClass, 'border-t-0 border-l-0 rounded-br')}
         onClick={(e) => {
           e.preventDefault();
           decrementValue();
