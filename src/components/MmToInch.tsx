@@ -2,6 +2,7 @@ import { useState } from 'react';
 import millimetersToInchesWithFractions from '../utils/millimetersToInchesWithFractions';
 import DecimalInput from './DecimalInput';
 import inchesWithFractionsToMillimeters from '../utils/inchesWithFractionsToMillimeters';
+import copyToClipboard from '../utils/copyToClipboard';
 
 const MmToInch = () => {
   const [valueInMm, setValueInMm] = useState(0);
@@ -54,8 +55,10 @@ const MmToInch = () => {
         <span id='tolerance'>{(valueInMm - tolerance).toFixed(3)}</span> mm
       </p>
 
-      {/* TODO: Implement copy to clipboard function */}
-      <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full select-none'>
+      <button
+        onClick={() => copyToClipboard(valueInInches)}
+        className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full select-none'
+      >
         Copy to clipboard
       </button>
     </div>
