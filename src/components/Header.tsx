@@ -1,7 +1,7 @@
 const Header = () => {
   return (
     <header className='flex flex-col items-center justify-center gap-4 bg-gray-200 text-gray-800 p-4'>
-      <h1 className='text-2xl font-bold'>Inches to Millimeters Calculator</h1>
+      <h1 className='text-2xl font-bold'>Inches to Millimeters Converter</h1>
 
       <h2>Convert inches to millimeters and vice versa</h2>
 
