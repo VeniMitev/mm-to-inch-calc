@@ -10,9 +10,9 @@ function App() {
       <Header />
 
       <div className='grow flex flex-col md:flex-row gap-4 items-center justify-center bg-gray-100 p-6'>
-        <InchToMm />
-
         <MmToInch />
+
+        <InchToMm />
       </div>
 
       <Footer />
