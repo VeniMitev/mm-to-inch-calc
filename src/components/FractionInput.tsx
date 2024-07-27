@@ -19,7 +19,7 @@ const FractionInput = (props: Props) => {
   const { value, className, step, min, id, name } = props;
 
   const [displayValue, setDisplayValue] = useState<string>(
-    numberWithFractionFormatter(value || 1),
+    numberWithFractionFormatter(value),
   );
 
   const { handleChange, handleBlur, incrementValue, decrementValue } =
@@ -44,6 +44,7 @@ const FractionInput = (props: Props) => {
       />
 
       <FractionInputButtons
+        value={value}
         incrementValue={incrementValue}
         decrementValue={decrementValue}
       />

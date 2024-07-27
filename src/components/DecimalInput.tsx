@@ -8,6 +8,7 @@ type Props = {
   setValueInMm: (val: number) => void;
   className?: string;
   step: number;
+  min: number;
   incrementValue: () => void;
   decrementValue: () => void;
 };
@@ -19,6 +20,7 @@ const DecimalInput = ({
   setValueInMm,
   className,
   step,
+  min,
   incrementValue,
   decrementValue,
 }: Props) => {
@@ -50,11 +52,13 @@ const DecimalInput = ({
         type='number'
         step={step}
         name={name}
+        min={min}
         value={valueInMm}
         onChange={(e) => setValueInMm(Number(e.target.value))}
       />
 
       <FractionInputButtons
+        value={valueInMm}
         incrementValue={incrementValue}
         decrementValue={decrementValue}
       />
