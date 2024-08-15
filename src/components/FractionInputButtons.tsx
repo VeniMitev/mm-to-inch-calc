@@ -12,13 +12,13 @@ const FractionInputButtons = ({
   value,
 }: Props) => {
   const buttonClass =
-    'border border-gray-300 p-0.5 text-gray-800 cursor-pointer hover:bg-gray-100';
+    'p-0.5 text-gray-800 cursor-pointer hover:bg-gray-100';
 
   return (
-    <div className='flex flex-col justify-center items-start w-1/4 h-full cursor-pointer'>
+    <div className='flex flex-col justify-center items-start h-full cursor-pointer border border-gray-300 border-l-0 peer-focus:border peer-focus:border-slate-950 peer-focus:outline-none peer-focus:border-1 peer-focus:border-l-0 rounded-tr-md rounded-br-md'>
       <div
-        // type='button'
-        // tabIndex={-1}
+        role='button'
+        tabIndex={-1}
         className={twMerge(buttonClass, 'border-b-0 border-l-0 rounded-tr')}
         onClick={(e) => {
           e.preventDefault();
@@ -40,8 +40,8 @@ const FractionInputButtons = ({
       </div>
 
       <div
-        // type='button'
-        // tabIndex={-1}
+        role='button'
+        tabIndex={-1}
         className={twMerge(buttonClass, 'border-t-0 border-l-0 rounded-br')}
         onClick={(e) => {
           if (value === 0) return;
