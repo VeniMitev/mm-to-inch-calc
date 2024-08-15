@@ -51,16 +51,13 @@ const FractionInputButtons = ({
           e.preventDefault();
           decrementValue();
         }}
-        onKeyDown={(e) => {
-          if (e.key === 'ArrowDown') {
-            e.preventDefault();
-            decrementValue();
-          }
-
-          if (e.key === 'Enter') {
-            e.preventDefault();
-          }
-        }}
+        onKeyDown={(e) =>
+          keyDownAction({
+            e,
+            incrementValue,
+            decrementValue,
+          })
+        }
       >
         <ChevronDown
           size={16}
