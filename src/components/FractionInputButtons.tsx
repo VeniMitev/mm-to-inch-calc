@@ -16,8 +16,7 @@ const FractionInputButtons = ({
 
   return (
     <div className='flex flex-col justify-center items-start h-full cursor-pointer border border-gray-300 border-l-0 peer-focus:border peer-focus:border-gray-400 peer-focus:outline-none peer-focus:border-1 peer-focus:border-l-0 rounded-tr rounded-br'>
-      <div
-        role='button'
+      <button
         tabIndex={-1}
         className={twMerge(buttonClass, 'border-b-0 border-l-0 rounded-tr')}
         onClick={(e) => {
@@ -37,10 +36,9 @@ const FractionInputButtons = ({
         }}
       >
         <ChevronUp size={16} strokeWidth={1} color='black' />
-      </div>
+      </button>
 
-      <div
-        role='button'
+      <button
         tabIndex={-1}
         className={twMerge(buttonClass, 'border-t-0 border-l-0 rounded-br')}
         onClick={(e) => {
@@ -65,7 +63,7 @@ const FractionInputButtons = ({
           strokeWidth={1}
           color={value === 0 ? 'gray' : 'black'}
         />
-      </div>
+      </button>
     </div>
   );
 };
