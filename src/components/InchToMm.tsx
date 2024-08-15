@@ -3,6 +3,7 @@ import inchesWithFractionsToMillimeters from '../utils/inchesWithFractionsToMill
 import FractionInput from './FractionInput';
 import copyToClipboard from '../utils/copyToClipboard';
 import { toast, Slide } from 'react-toastify';
+import { twMerge } from 'tailwind-merge';
 
 const InchToMm = () => {
   const [valueInch, setValueInch] = useState(0);
@@ -57,7 +58,12 @@ const InchToMm = () => {
           copyToClipboard(result);
           notify();
         }}
-        className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full select-none'
+        disabled={result === '0.000'}
+        className={twMerge(
+          'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full select-none',
+          result === '0.000' &&
+            'cursor-not-allowed bg-blue-200 hover:bg-blue-200',
+        )}
       >
         Copy to clipboard
       </button>

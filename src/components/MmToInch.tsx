@@ -4,6 +4,7 @@ import DecimalInput from './DecimalInput';
 import inchesWithFractionsToMillimeters from '../utils/inchesWithFractionsToMillimeters';
 import copyToClipboard from '../utils/copyToClipboard';
 import { Slide, toast } from 'react-toastify';
+import { twMerge } from 'tailwind-merge';
 
 const MmToInch = () => {
   const [valueInMm, setValueInMm] = useState(0);
@@ -75,7 +76,12 @@ const MmToInch = () => {
           copyToClipboard(valueInInches);
           notify();
         }}
-        className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full select-none'
+        disabled={valueInInches === '0'}
+        className={twMerge(
+          'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full select-none',
+          valueInInches === '0' &&
+            'cursor-not-allowed bg-blue-200 hover:bg-blue-200',
+        )}
       >
         Copy to clipboard
       </button>
