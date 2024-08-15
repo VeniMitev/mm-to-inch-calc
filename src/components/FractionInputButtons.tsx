@@ -12,14 +12,14 @@ const FractionInputButtons = ({
   value,
 }: Props) => {
   const buttonClass =
-    'border border-gray-300 p-0.5 text-gray-800 cursor-pointer';
+    'border border-gray-300 p-0.5 text-gray-800 cursor-pointer hover:bg-gray-100';
 
   return (
     <div className='flex flex-col justify-center items-start w-1/4 h-full cursor-pointer'>
       <div
         // type='button'
         // tabIndex={-1}
-        className={twMerge(buttonClass + 'border-b-0 border-l-0 rounded-tr')}
+        className={twMerge(buttonClass, 'border-b-0 border-l-0 rounded-tr')}
         onClick={(e) => {
           e.preventDefault();
 
