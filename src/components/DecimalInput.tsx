@@ -1,5 +1,6 @@
 import { twMerge } from 'tailwind-merge';
 import FractionInputButtons from './FractionInputButtons';
+import keyDownAction from '../utils/keyDownAction';
 
 type Props = {
   id: string;
@@ -55,6 +56,13 @@ const DecimalInput = ({
         min={min}
         value={valueInMm}
         onChange={(e) => setValueInMm(Number(e.target.value))}
+        onKeyDown={(e) =>
+          keyDownAction({
+            e,
+            incrementValue,
+            decrementValue,
+          })
+        }
       />
 
       <FractionInputButtons

@@ -3,6 +3,7 @@ import numberWithFractionFormatter from '../utils/numberWithFractionFormatter';
 import FractionInputButtons from './FractionInputButtons';
 import useNumberInputFractions from '../hooks/useNumberInputFractions';
 import { twMerge } from 'tailwind-merge';
+import keyDownAction from '../utils/keyDownAction';
 
 export type Props = {
   id: string;
@@ -42,6 +43,13 @@ const FractionInput = (props: Props) => {
         onBlur={handleBlur}
         step={step}
         min={min}
+        onKeyDown={(e) =>
+          keyDownAction({
+            e,
+            incrementValue,
+            decrementValue,
+          })
+        }
       />
 
       <FractionInputButtons
