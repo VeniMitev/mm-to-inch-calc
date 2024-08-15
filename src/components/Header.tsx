@@ -14,12 +14,13 @@ const Header = () => {
         What sets this tool apart from others online is its unique use of
         fractions for inputting and outputting values during conversions. While
         most tools provide output in decimal form, this one gives you results in
-        fractions, which is far more useful in real-life scenarios.
+        fractions, which is far more useful in real-life scenarios like interior
+        design projects.
       </p>
 
       <p className='text-sm max-w-prose'>
-        The first version of this tool was developed for an application I
-        created for one of my employers, specifically for generating invoices
+        The first version of this tool was created for an application I
+        developed for one of my employers, specifically for generating invoices
         for interior design projects. Users often need to convert measurements
         from millimeters to inches and prefer the results in fractions rather
         than decimals. Existing tools didn’t offer the convenience and speed
@@ -29,10 +30,11 @@ const Header = () => {
       <p className='text-sm max-w-prose'>
         I developed this tool to meet those needs, providing an easy and fast
         way to perform multiple conversions, seamlessly integrated into the
-        existing application. This current version is a showcase piece for my
-        portfolio, demonstrating my ability to tackle complex projects as a
-        software developer. Although it looks different from the one built for
-        the application, the inner workings remain the same.
+        existing application, which was by far the biggest advantage of this
+        tool. This current version is a showcase piece for my portfolio,
+        demonstrating my ability to tackle complex projects as a software
+        developer. Although it looks different from the one built for the
+        application, the inner workings remain the same.
       </p>
     </header>
   );
