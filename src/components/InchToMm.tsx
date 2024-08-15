@@ -2,6 +2,7 @@ import { useState } from 'react';
 import inchesWithFractionsToMillimeters from '../utils/inchesWithFractionsToMillimeters';
 import FractionInput from './FractionInput';
 import copyToClipboard from '../utils/copyToClipboard';
+import { toast, Slide } from 'react-toastify';
 
 const InchToMm = () => {
   const [valueInch, setValueInch] = useState(0);
@@ -9,6 +10,20 @@ const InchToMm = () => {
   const valueInMm = inchesWithFractionsToMillimeters(valueInch);
 
   const result = valueInMm.toFixed(3);
+
+  const notify = () =>
+    toast.success(`Copied ${result}mm to clipboard!`, {
+      position: 'bottom-right',
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      pauseOnFocusLoss: false,
+      draggable: true,
+      progress: undefined,
+      theme: 'light',
+      transition: Slide,
+    });
 
   return (
     <div className='bg-white shadow-md rounded px-8 pt-6 pb-8'>
@@ -38,7 +53,10 @@ const InchToMm = () => {
 
       {/* TODO: Implement copy to clipboard function */}
       <button
-        onClick={() => copyToClipboard(result)}
+        onClick={() => {
+          copyToClipboard(result);
+          notify();
+        }}
         className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full select-none'
       >
         Copy to clipboard

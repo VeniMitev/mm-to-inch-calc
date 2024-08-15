@@ -1,8 +1,10 @@
+import { ToastContainer } from 'react-toastify';
 import './App.css';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import InchToMm from './components/InchToMm';
 import MmToInch from './components/MmToInch';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       </div>
 
       <Footer />
+
+      <ToastContainer />
     </section>
   );
 }
