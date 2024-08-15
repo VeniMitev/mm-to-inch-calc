@@ -47,7 +47,7 @@ const DecimalInput = ({
       </style>
 
       <input
-        className='border border-gray-300 rounded-l-md py-2 px-3 text-gray-800 peer focus:outline-none focus:border-gray-400 focus:border-1 rounded-tr-none rounded-br-none'
+        className='border border-gray-300 rounded-l py-2 px-3 text-gray-800 peer focus:outline-none focus:border-gray-400 focus:border-1 rounded-tr-none rounded-br-none'
         id={id}
         type='number'
         step={step}

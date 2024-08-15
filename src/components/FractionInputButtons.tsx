@@ -15,7 +15,7 @@ const FractionInputButtons = ({
     'p-0.5 text-gray-800 cursor-pointer hover:bg-gray-100';
 
   return (
-    <div className='flex flex-col justify-center items-start h-full cursor-pointer border border-gray-300 border-l-0 peer-focus:border peer-focus:border-gray-400 peer-focus:outline-none peer-focus:border-1 peer-focus:border-l-0 rounded-tr-md rounded-br-md'>
+    <div className='flex flex-col justify-center items-start h-full cursor-pointer border border-gray-300 border-l-0 peer-focus:border peer-focus:border-gray-400 peer-focus:outline-none peer-focus:border-1 peer-focus:border-l-0 rounded-tr rounded-br'>
       <div
         role='button'
         tabIndex={-1}
