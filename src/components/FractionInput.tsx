@@ -17,7 +17,7 @@ export type Props = {
 
 const FractionInput = (props: Props) => {
   const { value, className, step, min, id, name } = props;
-  
+
   const [displayValue, setDisplayValue] = useState<string>(
     numberWithFractionFormatter(value),
   );
@@ -34,7 +34,7 @@ const FractionInput = (props: Props) => {
     >
       {/* TODO: Input does not allow for manual input of a fraction */}
       <input
-        className='border border-gray-300 rounded-l-md py-2 px-3 text-gray-800 peer focus:outline-none focus:border-slate-950 focus:border-1 rounded-tr-none rounded-br-none'
+        className='border border-gray-300 rounded-l-md py-2 px-3 text-gray-800 peer focus:outline-none focus:border-gray-400 focus:border-1 rounded-tr-none rounded-br-none'
         id={id}
         name={name}
         value={displayValue}
