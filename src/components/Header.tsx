@@ -1,9 +1,9 @@
 const Header = () => {
   return (
     <header className='flex flex-col items-center justify-center gap-4 bg-gray-200 text-gray-800 p-4'>
-      <h1 className='text-2xl font-bold'>Inches to Millimeters Converter</h1>
+      <h1 className='text-2xl font-bold'>Millimeter to Inch Converter</h1>
 
-      <h2>Convert inches to millimeters and vice versa</h2>
+      <h2>Convert millimeters to inches and vice versa</h2>
 
       <p className='text-sm max-w-prose'>
         Enter a value in the input fields and the conversion will be done
